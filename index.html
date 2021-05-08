@@ -9,16 +9,22 @@
 </head>
 
 <body>
-    <nav class="nav-sidebar">
+    <nav class="nav-main">
         <div class="btn-toggle-nav" onclick="toggleNav()"></div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
 
+        </ul>
     </nav>
+
+    <aside class="nav-sidebar">
+        <ul>
+            <li onclick="colorBG('#808080')"><a class="greyBG">Home</a></li>
+            <li onclick="colorBG('#ff0000')"><a class="redBG">Red</a></li>
+            <li onclick="colorBG('#ffa500')"><a class="orangeBG" href="#">Orange</a></li>
+            <li onclick="colorBG('#800080')"><a class="purpleBG" href="#">Purple</a></li>
+            <li onclick="colorBG('#008000')"><a class="greenBG" href="#">Green</a></li>
+        </ul>
+    </aside>
 
 
     <main>
