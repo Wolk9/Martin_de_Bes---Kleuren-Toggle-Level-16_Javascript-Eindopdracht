@@ -1,8 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,500,700");
+
 /* Global */
 h1 {
   text-align: center;
   font-family: raleway;
+}
+
+p {
+  margin-top: 35%;
+  text-align: center;
+  font-family: raleway;
+  font-weight: 500;
+  font-size: larger;
 }
 
 body {
@@ -107,4 +116,6 @@ body {
 
 .greenBG {
   background-color: green;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -8,9 +8,10 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
 
-<body>
+<body id="BG" onkeypress="keysDown()">
     <nav class="nav-main">
-        <div class="btn-toggle-nav" onclick="toggleNav()"></div>
+        <!-- <div class="btn-toggle-nav" onclick="toggleNav()"></div> -->
+        <div class="btn-toggle-nav" onmouseover="openNav()"></div>
         <ul>
 
         </ul>
@@ -18,18 +19,26 @@
 
     <aside class="nav-sidebar">
         <ul>
-            <li onclick="colorBG('#808080')"><a class="greyBG">Home</a></li>
-            <li onclick="colorBG('#ff0000')"><a class="redBG">Red</a></li>
-            <li onclick="colorBG('#ffa500')"><a class="orangeBG" href="#">Orange</a></li>
-            <li onclick="colorBG('#800080')"><a class="purpleBG" href="#">Purple</a></li>
-            <li onclick="colorBG('#008000')"><a class="greenBG" href="#">Green</a></li>
+            <li onclick="colorBG('grey')"><a class="greyBG">Home</a></li>
+            <li onclick="colorBG('red')"><a class="redBG">Red</a></li>
+            <li onclick="colorBG('orange')"><a class="orangeBG" href="#">Orange</a></li>
+            <li onclick="colorBG('purple')"><a class="purpleBG" href="#">Purple</a></li>
+            <li onclick="colorBG('green')"><a class="greenBG" href="#">Green</a></li>
         </ul>
     </aside>
 
 
     <main>
         <h1>Eindopdracht JavaScript Basics</h1>
+        <p id="p1" onkeypress="keysDown()">Press keys on the keyboard change the color correspondent to the numbers in
+            the menu</p>
     </main>
+
+
+
+
+
+
 </body>
 
 </html>

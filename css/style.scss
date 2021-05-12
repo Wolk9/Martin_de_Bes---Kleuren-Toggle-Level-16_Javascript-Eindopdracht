@@ -5,6 +5,7 @@ $basicbackgroundcolor: #3f899e;
 /* Global */
 
 h1 {
+  margin-top: 35%;
   text-align: center;
   font-family: raleway;
 }
@@ -13,13 +14,17 @@ body {
   background-color: $basicbackgroundcolor;
 }
 
+p {
+  margin-top: 35%;
+  text-align: center;
+}
+
 .nav-main {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
-  //   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
   z-index: 500;
