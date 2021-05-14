@@ -1,4 +1,5 @@
-// function to open the hamburger Nav. When is declared in HTML with onMouseOver
+// The following function is to open the hamburger Nav.
+// When is declared in HTML with onMouseOver
 
 let openNav = function () {
   let getSidebar = document.querySelector(".nav-sidebar");
@@ -17,7 +18,8 @@ let openNav = function () {
   }
 };
 
-//function to close the hamburger Nav. This is done when a color in the menu is clicked
+// The following function to close the hamburger Nav.
+// This is done when a color in the menu is clicked
 
 let closeNav = function () {
   let getSidebar = document.querySelector(".nav-sidebar");
@@ -37,30 +39,40 @@ let closeNav = function () {
   getSidebarUl.style.visibility = "hidden";
 };
 
-//function to change the BG color of the id BG (body)
-//and to close the menu when a color is clicked
+// The following function is to change the BG color of the id BG (body)
+// and to close the menu when a color is clicked
 
 function colorBG(getColorBG) {
   let getBody = document.querySelector("body");
   let changeText = document.getElementById("p1");
 
-  getBody.style.backgroundColor = getColorBG;
-  changeText.innerHTML = getColorBG;
-  changeText.style.fontWeight = 700;
-  changeText.style.fontSizeAdjust = 2;
+  getBody.style.backgroundColor = getColorBG; // change the BG color in 'body'
+  changeText.innerHTML = getColorBG; // change text p1 to name of color
+  changeText.style.fontWeight = 700; // change fontweight of name of color
+  changeText.style.fontSizeAdjust = 2; // change size of name of color
 
-  closeNav();
+  closeNav(); // call function to close the hamburger Nav.
 }
 
-const keyPress = document
-  .getElementById("BG")
-  .addEventListener(KeyboardEvent, colorBG);
+// The following functions are taking care of listening to the keyboard and
+// change the colors accordingly.
 
-function keysDown(keyPress1) {
-  if (keyPress == "1") {
-    colorBG(grey);
-  } else if (keyPress == "2") {
-    colorBG(red);
+function setKeyDownListener() {
+  window.addEventListener("keydown", function (event) {
+    catchKey(event.key);
+  });
+}
+
+function catchKey(pressedKey) {
+  if (pressedKey == "1") {
+    colorBG("grey");
+  } else if (pressedKey == "2") {
+    colorBG("red");
+  } else if (pressedKey == "3") {
+    colorBG("orange");
+  } else if (pressedKey == "4") {
+    colorBG("purple");
+  } else if (pressedKey == "5") {
+    colorBG("green");
   }
-  1;
 }

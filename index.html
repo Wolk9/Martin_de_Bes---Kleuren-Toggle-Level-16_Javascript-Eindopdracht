@@ -3,12 +3,12 @@
 
 <head>
     <title>LEVEL 16 - EINDOPDRACHT | JAVASCRIPT BASICS</title>
-    <script defer src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <script defer src="js/script.js"></script>
 </head>
 
-<body id="BG" onkeypress="keysDown()">
+<body id="BG" onload="setKeyDownListener()">
     <nav class="nav-main">
         <!-- <div class="btn-toggle-nav" onclick="toggleNav()"></div> -->
         <div class="btn-toggle-nav" onmouseover="openNav()"></div>
@@ -19,18 +19,18 @@
 
     <aside class="nav-sidebar">
         <ul>
-            <li onclick="colorBG('grey')"><a class="greyBG">Home</a></li>
-            <li onclick="colorBG('red')"><a class="redBG">Red</a></li>
-            <li onclick="colorBG('orange')"><a class="orangeBG" href="#">Orange</a></li>
-            <li onclick="colorBG('purple')"><a class="purpleBG" href="#">Purple</a></li>
-            <li onclick="colorBG('green')"><a class="greenBG" href="#">Green</a></li>
+            <li onclick="colorBG('grey')"><a class="greyBG">Home (1)</a></li>
+            <li onclick="colorBG('red')"><a class="redBG">Red (2)</a></li>
+            <li onclick="colorBG('orange')"><a class="orangeBG" href="#">Orange (3)</a></li>
+            <li onclick="colorBG('purple')"><a class="purpleBG" href="#">Purple (4)</a></li>
+            <li onclick="colorBG('green')"><a class="greenBG" href="#">Green (5)</a></li>
         </ul>
     </aside>
 
 
     <main>
         <h1>Eindopdracht JavaScript Basics</h1>
-        <p id="p1" onkeypress="keysDown()">Press keys on the keyboard change the color correspondent to the numbers in
+        <p id="p1">Press keys on the keyboard change the color correspondent to the numbers in
             the menu</p>
     </main>
 
