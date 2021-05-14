@@ -4,10 +4,14 @@ $basicbackgroundcolor: #3f899e;
 
 /* Global */
 
-h1 {
-  margin-top: 35%;
-  text-align: center;
+* {
   font-family: raleway;
+}
+
+h1,
+h4 {
+  margin-top: 2%;
+  text-align: center;
 }
 
 body {
@@ -15,8 +19,14 @@ body {
 }
 
 p {
-  margin-top: 35%;
+  margin-top: 5%;
   text-align: center;
+}
+
+form {
+  text-align: center;
+  margin-top: 10%;
+  visibility: hidden;
 }
 
 .nav-main {
@@ -58,7 +68,7 @@ p {
 .nav-sidebar {
   position: fixed;
   left: 0;
-  top: 60px;
+  top: 40px;
   width: 60px;
   height: calc(100vh - 60px);
   padding: 0 0px;
@@ -100,32 +110,32 @@ p {
 
 .greyBG {
   background-color: grey;
-  &&:hover {
+  &:hover {
     color: #808080;
   }
 }
 .redBG {
   background-color: #ff0000;
-  &&:hover {
+  &:hover {
     color: red;
   }
 }
 .orangeBG {
   background-color: #ffa500;
-  &&:hover {
+  &:hover {
     color: orange;
   }
 }
 .purpleBG {
   background-color: #800080;
-  &&:hover {
+  &:hover {
     color: purple;
   }
 }
 
 .greenBG {
   background-color: #008000;
-  &&:hover {
+  &:hover {
     color: green;
   }
 }

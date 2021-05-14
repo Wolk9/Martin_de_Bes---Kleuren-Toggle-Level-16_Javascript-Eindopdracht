@@ -10,28 +10,34 @@
 
 <body id="BG" onload="setKeyDownListener()">
     <nav class="nav-main">
-        <!-- <div class="btn-toggle-nav" onclick="toggleNav()"></div> -->
         <div class="btn-toggle-nav" onmouseover="openNav()"></div>
         <ul>
 
         </ul>
     </nav>
 
-    <aside class="nav-sidebar">
+    <aside class="nav-sidebar" onmouseleave="closeNav()">
         <ul>
-            <li onclick="colorBG('grey')"><a class="greyBG">Home (1)</a></li>
-            <li onclick="colorBG('red')"><a class="redBG">Red (2)</a></li>
-            <li onclick="colorBG('orange')"><a class="orangeBG" href="#">Orange (3)</a></li>
-            <li onclick="colorBG('purple')"><a class="purpleBG" href="#">Purple (4)</a></li>
-            <li onclick="colorBG('green')"><a class="greenBG" href="#">Green (5)</a></li>
+            <li onclick="colorBG('grey')"><a class="greyBG">Grijs (1)</a></li>
+            <li onclick="colorBG('red')"><a class="redBG">Rood (2)</a></li>
+            <li onclick="colorBG('orange')"><a class="orangeBG" href="#">Oranje (3)</a></li>
+            <li onclick="colorBG('purple')"><a class="purpleBG" href="#">Paars (4)</a></li>
+            <li onclick="colorBG('green')"><a class="greenBG" href="#">Groen (5)</a></li>
         </ul>
     </aside>
 
 
     <main>
         <h1>Eindopdracht JavaScript Basics</h1>
-        <p id="p1">Press keys on the keyboard change the color correspondent to the numbers in
-            the menu</p>
+        <form class="radioButtons">
+            <h4>De geselecteerde kleur is:</h4>
+            <input type="radio" name="choice" value="grey">1 Grijs
+            <input type="radio" name="choice" value="red">2 Rood
+            <input type="radio" name="choice" value="orange">3 Oranje
+            <input type="radio" name="choice" value="purple">4 Paars
+            <input type="radio" name="choice" value="green">5 Groen
+        </form>
+        <p id="p1">Druk op 1 tm 5 om de kleur corresponderend te veranderen</p>
     </main>
 
 

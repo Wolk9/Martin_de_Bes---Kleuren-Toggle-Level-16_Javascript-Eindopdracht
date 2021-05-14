@@ -1,21 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,500,700");
-
 /* Global */
-h1 {
-  text-align: center;
+* {
   font-family: raleway;
 }
 
-p {
-  margin-top: 35%;
+h1,
+h4 {
+  margin-top: 2%;
   text-align: center;
-  font-family: raleway;
-  font-weight: 500;
-  font-size: larger;
 }
 
 body {
   background-color: #3f899e;
+}
+
+p {
+  margin-top: 5%;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  margin-top: 10%;
+  visibility: hidden;
 }
 
 .nav-main {
@@ -57,12 +64,12 @@ body {
 .nav-sidebar {
   position: fixed;
   left: 0;
-  top: 60px;
+  top: 40px;
   width: 60px;
   height: calc(100vh - 60px);
   padding: 0 0px;
   z-index: 750;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .nav-sidebar ul {
@@ -101,21 +108,34 @@ body {
 .greyBG {
   background-color: grey;
 }
+.greyBG:hover {
+  color: #808080;
+}
 
 .redBG {
-  background-color: red;
+  background-color: #ff0000;
+}
+.redBG:hover {
+  color: red;
 }
 
 .orangeBG {
-  background-color: orange;
+  background-color: #ffa500;
+}
+.orangeBG:hover {
+  color: orange;
 }
 
 .purpleBG {
-  background-color: purple;
+  background-color: #800080;
+}
+.purpleBG:hover {
+  color: purple;
 }
 
 .greenBG {
-  background-color: green;
+  background-color: #008000;
 }
-
-/*# sourceMappingURL=style.css.map */
+.greenBG:hover {
+  color: green;
+}/*# sourceMappingURL=style.css.map */
