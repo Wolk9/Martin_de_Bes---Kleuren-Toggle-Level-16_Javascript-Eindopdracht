@@ -1,19 +1,20 @@
 // The following function is to open the hamburger Nav.
 // When is declared in HTML with onMouseOver (bonus requirement 3)
 
-let openNav = function () {
-  let getSidebar = document.querySelector(".nav-sidebar");
-  let getSidebarUl = document.querySelector(".nav-sidebar ul");
-  let getSidebarLinks = document.querySelectorAll(".nav-sidebar a");
+const openNav = function () {
+  const getSidebar = document.querySelector(".nav-sidebar");
+  const getSidebarUl = document.querySelector(".nav-sidebar ul");
+  const getSidebarLinks = document.querySelectorAll(".nav-sidebar a");
+  const getNavBtn = document.querySelector(".btn-toggle-nav");
 
-  getSidebarUl.style.visibility = "visible";
-  getSidebar.style.width = "272px";
-  getSidebar.style.opacity = "1";
+  getSidebar.classList.add("openNavSideBar");
+  getNavBtn.classList.add("openNavBtnToggleNav");
+  getSidebarUl.classList.add("openNavSidebarul");
 
   let arrayLength = getSidebarLinks.length;
 
   for (let i = 0; i < arrayLength; i++) {
-    getSidebarLinks[i].style.opacity = "1";
+    getSidebarLinks[i].classList.add("openSideBarA");
   }
 };
 
@@ -22,32 +23,38 @@ let openNav = function () {
 // Bonus requirement 3:
 // or when the mouse is not hovering above the hamburger
 
-let closeNav = function () {
-  let getSidebar = document.querySelector(".nav-sidebar");
-  let getSidebarUl = document.querySelector(".nav-sidebar ul");
-  let getSidebarLinks = document.querySelectorAll(".nav-sidebar a");
-  let getNavBtn = document.querySelector(".btn-toggle-nav");
-  getSidebar.style.width = "0px";
-  getSidebar.style.opacity = "0";
-  getNavBtn.style.visibility = "visible";
-  getNavBtn.style.zindex = "1000";
+const closeNav = function () {
+  const getSidebar = document.querySelector(".nav-sidebar");
+  const getSidebarUl = document.querySelector(".nav-sidebar ul");
+  const getSidebarLinks = document.querySelectorAll(".nav-sidebar a");
+  const getNavBtn = document.querySelector(".btn-toggle-nav");
+
+  getSidebar.classList.remove("openNavSideBar");
+  getNavBtn.classList.remove("openNavBtnToggleNav");
+  getSidebarUl.classList.remove("openNavSidebarul");
 
   let arrayLength = getSidebarLinks.length;
 
   for (let i = 0; i < arrayLength; i++) {
-    getSidebarLinks[i].style.opacity = "0";
+    getSidebarLinks[i].classList.remove("openSideBarA");
   }
-  getSidebarUl.style.visibility = "hidden";
+  getSidebarUl.classList.remove("openSideBarUl");
 };
+
+const toggleNav = document.querySelector(".btn-toggle-nav");
+
+toggleNav.addEventListener("mousemove", openNav);
+toggleNav.addEventListener("mouseout", closeNav);
 
 // The following function is to change the BG color of the id BG (body)
 // and to close the menu when a color is clicked
+// it is adressed by keypress from 1 to 5 and from mouseclick in the nav
 
 function colorBG(getColorBG) {
-  let getBody = document.querySelector("body");
-  let getForm = document.querySelector("form");
-  let changeText = document.getElementById("p1");
-  let changeSelectedRadioBtn = document.getElementsByName("choice");
+  const getBody = document.querySelector("body");
+  const getForm = document.querySelector("form");
+  const changeText = document.getElementById("p1");
+  const changeSelectedRadioBtn = document.getElementsByName("choice");
 
   getBody.style.backgroundColor = getColorBG; // change the BG color in 'body'
   // Bonus requirement 4:
@@ -69,26 +76,34 @@ function colorBG(getColorBG) {
   closeNav(); // call function to close the hamburger Nav.
 }
 
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".greyBG")) {
+    colorBG("grey");
+  } else if (e.target.matches(".redBG")) {
+    colorBG("red");
+  } else if (e.target.matches(".orangeBG")) {
+    colorBG("orange");
+  } else if (e.target.matches(".purpleBG")) {
+    colorBG("purple");
+  } else if (e.target.matches(".greenBG")) {
+    colorBG("green");
+  }
+});
+
 // The following functions are taking care of listening to the keyboard and
 // change the colors accordingly.
 // Bonus requirement 6:
 
-function setKeyDownListener() {
-  window.addEventListener("keydown", function (event) {
-    catchKey(event.key);
-  });
-}
-
-function catchKey(pressedKey) {
-  if (pressedKey == "1") {
+document.addEventListener("keypress", (e) => {
+  if (e.key === "1") {
     colorBG("grey");
-  } else if (pressedKey == "2") {
+  } else if (e.key === "2") {
     colorBG("red");
-  } else if (pressedKey == "3") {
+  } else if (e.key === "3") {
     colorBG("orange");
-  } else if (pressedKey == "4") {
+  } else if (e.key === "4") {
     colorBG("purple");
-  } else if (pressedKey == "5") {
+  } else if (e.key === "5") {
     colorBG("green");
   }
-}
+});
