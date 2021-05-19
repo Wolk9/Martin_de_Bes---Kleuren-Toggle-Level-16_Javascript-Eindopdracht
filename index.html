@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>LEVEL 16 - EINDOPDRACHT | JAVASCRIPT BASICS</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/code.js"></script>
+    <title>Level 16 - Eindopdracht Javascript Kleurentogle v2</title>
 </head>
 
-<body id="BG" onload="setKeyDownListener()">
-    <nav class="nav-main">
-        <div class="btn-toggle-nav" onmouseover="openNav()"></div>
-        <ul>
+<body>
+    <h1>Eindopdracht JavaScript Basics</h1>
 
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav-left">
+            <li class="nav-link greyBG"><a class="greyBG">Grijs (1)</a></li>
+            <li class="nav-link redBG"><a class="redBG">Rood (2)</a></li>
+            <li class="nav-link orangeBG"><a class="orangeBG">Oranje (3)</a></li>
+            <li class="nav-link purpleBG"><a class="purpleBG">Paars (4)</a></li>
+            <li class="nav-link greenBG"><a class="greenBG">Groen (5)</a></li>
         </ul>
     </nav>
 
-    <aside class="nav-sidebar" onmouseleave="closeNav()">
-        <ul>
-            <li onclick="colorBG('grey')"><a class="greyBG">Grijs (1)</a></li>
-            <li onclick="colorBG('red')"><a class="redBG">Rood (2)</a></li>
-            <li onclick="colorBG('orange')"><a class="orangeBG" href="#">Oranje (3)</a></li>
-            <li onclick="colorBG('purple')"><a class="purpleBG" href="#">Paars (4)</a></li>
-            <li onclick="colorBG('green')"><a class="greenBG" href="#">Groen (5)</a></li>
-        </ul>
-    </aside>
 
 
-    <main>
-        <h1>Eindopdracht JavaScript Basics</h1>
+    <div class="main">
         <form class="radioButtons">
             <h4>De geselecteerde kleur is:</h4>
             <input type="radio" name="choice" value="grey">1 Grijs
@@ -38,9 +42,7 @@
             <input type="radio" name="choice" value="green">5 Groen
         </form>
         <p id="p1">Druk op 1 tm 5 om de kleur corresponderend te veranderen</p>
-    </main>
-
-
+    </div>
 
 
 
