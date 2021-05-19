@@ -59,8 +59,7 @@ function colorBG(getColorBG) {
   getBody.style.backgroundColor = getColorBG; // change the BG color in 'body'
   // Bonus requirement 4:
   changeText.innerHTML = getColorBG; // change text p1 to name of color
-  changeText.style.fontWeight = 700; // change fontweight of name of color
-  changeText.style.fontSizeAdjust = 2; // change size of name of color
+  changeText.classList.add("bigColorText"); // change fontweight of name of color and change size of name of color
   getForm.style.visibility = "visible"; // change visibility of form tag once a color is selected
 
   // the function below checkes which color is selected and selects

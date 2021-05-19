@@ -43,10 +43,7 @@ form {
   cursor: pointer;
   z-index: 100;
   visibility: visible;
-}
-
-.btn-toggle-nav:hover {
-  // opacity: 1;
+  // transition: width 1s ease-in-out;
 }
 
 .nav-sidebar {
@@ -54,19 +51,19 @@ form {
   top: 40px;
   left: -40px;
   height: calc(100vh - 60px);
-  // padding: 0 0px;
+  padding-top: 0px;
   // width: 60px;
   display: flex;
   flex-wrap: wrap;
   // z-index: auto;
-  transition: all 0.8s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .nav-sidebar ul {
   position: relative;
   // padding-top: 0px;
   left: 0px;
-  width: 100%;
+  width: 272px;
   // overflow: hidden;
   visibility: hidden;
 }
@@ -78,9 +75,10 @@ form {
 
 .nav-sidebar ul li {
   left: 0;
+  width: 0px;
   line-height: 60px;
   list-style: none;
-  transition: all 0.8s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .nav-sidebar ul li a {
@@ -92,7 +90,7 @@ form {
   font-family: raleway;
   font-size: 16px;
   white-space: nowrap;
-  transition: all 0.8s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .nav-sidebar ul li a:hover {
@@ -112,6 +110,15 @@ form {
 .openSideBarA {
   visibility: visible;
   opacity: 1;
+  width: 272px;
+}
+
+.bigColorText {
+  font-weight: 700;
+  font-size: 28px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .greyBG {

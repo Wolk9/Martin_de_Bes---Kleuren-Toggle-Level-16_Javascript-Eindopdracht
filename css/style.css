@@ -46,15 +46,16 @@ form {
   top: 40px;
   left: -40px;
   height: calc(100vh - 60px);
+  padding-top: 0px;
   display: flex;
   flex-wrap: wrap;
-  transition: all 0.8s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .nav-sidebar ul {
   position: relative;
   left: 0px;
-  width: 100%;
+  width: 272px;
   visibility: hidden;
 }
 
@@ -64,9 +65,10 @@ form {
 
 .nav-sidebar ul li {
   left: 0;
+  width: 0px;
   line-height: 60px;
   list-style: none;
-  transition: all 0.8s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .nav-sidebar ul li a {
@@ -78,7 +80,7 @@ form {
   font-family: raleway;
   font-size: 16px;
   white-space: nowrap;
-  transition: all 0.8s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .nav-sidebar ul li a:hover {
@@ -98,6 +100,15 @@ form {
 .openSideBarA {
   visibility: visible;
   opacity: 1;
+  width: 272px;
+}
+
+.bigColorText {
+  font-weight: 700;
+  font-size: 28px;
+}
+.bigColorText::first-letter {
+  text-transform: uppercase;
 }
 
 .greyBG {
